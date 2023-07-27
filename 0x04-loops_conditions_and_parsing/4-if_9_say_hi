@@ -5,11 +5,12 @@
 hb=0
 while [  $hb -lt 10 ]
 do
-    if [ $hb -eq 8 ]; then
-        echo "Hi"
-    else
-        echo "Best School"
-    fi
+         if [ $hb -eq 8 ];
+         then
+                echo "Hi"
+         else
+         echo "Best School"
+         fi
 
-    hb=$((hb+1))
+         hb=$((hb+1))
 done
