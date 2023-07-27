@@ -30,7 +30,6 @@ Then, you can run the script with the command:
 ./1-for_best_school
 ```
 
-It will display "Best School" 10 times, just like the output you provided
 
 
 #  Bash script that uses a while loop to display "Best School" 10 times:
@@ -64,4 +63,4 @@ Then, you can run the script with the command:
 ./2-while_best_school
 ```
 
-It will display "Best School" 10 times, just like the output you provided.
+
