@@ -3,7 +3,7 @@
 sa3a=0
 while [ $sa3a -le 12 ]
 do
-    echo "Hours: $sa3a"
+    echo "Hour: $sa3a"
     minute=1
     while [ $minute -le 59 ]
     do
