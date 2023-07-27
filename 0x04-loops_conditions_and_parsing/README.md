@@ -65,7 +65,7 @@ Then, you can run the script with the command:
 
 # a Bash script that uses the until loop to display "Best School" 10 times:
 
-````bash
+```bash
 
 #!/usr/bin/env bash
 
@@ -87,7 +87,7 @@ done
 
 
 
-````bash
+```bash
 #!/usr/bin/env bash
 
 # This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
@@ -112,7 +112,7 @@ done
 
 # a Bash script that uses a while loop and an if statement to display "Best School" 10 times but says "Hi" on a new line during the 9th iteration
 
-````bash
+```bash
 #!/usr/bin/env bash
 
 # This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
@@ -136,7 +136,7 @@ done
 
 Save the script in a file, for example, "4-if_9_say_hi", and make sure to give it execute permissions using the following command:
 
-````bash
+```bash
 chmod +x 4-if_9_say_hi
 Then, you can run the script with the command:
 
@@ -154,7 +154,7 @@ It will display "Best School" 10 times, but on the 9th iteration, it will print 
 in this file we use the logiqal operations for get the output like alx want and this is a code 
 ``
 
-````bash
+```bash
 #!/usr/bin/env bash
 #This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
 hb=0
