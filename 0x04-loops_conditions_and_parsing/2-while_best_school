@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#This script is displaying "Best School" 10 times
+
+#Initialize a counter
+
+count=0
+
+#dispalay the string 10 times
+
+while [ $count -lt 10 ] 
+do 
+    echo "Best School"
+    
+    let count=count+1
+done
