@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#This script displays the time for 12 hours and 59 minutes
+sa3a=0
+while [ $sa3a -le 12 ]
+do
+    echo "Hours: $sa3a"
+    minute=1
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      minute=$((minute+1))
+    done
+    sa3a=$((sa3a+1))
+done
