@@ -83,10 +83,11 @@ do
 done
 ```
 
-#  a Bash script that uses a while loop and an if statement to display "Best School" 10 times but says "Hi" on a new line during the 9th iteration:
+# a Bash script that uses a while loop and an if statement to display "Best School" 10 times but says "Hi" on a new line during the 9th iteration
+
+
 
 ````bash
-
 #!/usr/bin/env bash
 
 # This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
@@ -109,10 +110,9 @@ done
 ```
 
 
-# a Bash script that uses a while loop and an if statement to display "Best School" 10 times but says "Hi" on a new line during the 9th iteration:
+# a Bash script that uses a while loop and an if statement to display "Best School" 10 times but says "Hi" on a new line during the 9th iteration
 
 ````bash
-
 #!/usr/bin/env bash
 
 # This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
@@ -133,6 +133,7 @@ do
     ((count++))
 done
 ```
+
 Save the script in a file, for example, "4-if_9_say_hi", and make sure to give it execute permissions using the following command:
 
 ````bash
