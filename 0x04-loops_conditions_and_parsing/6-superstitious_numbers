@@ -3,20 +3,17 @@
 hb=1
 while [ $hb -le 20 ]
 do
-    if [ $hb -eq 4 ]
-    then
     echo $hb
-    echo "bad luck from China"
-    elif [ $hb -eq 9 ]
-    then
+    case $hb in
+    4)
     echo $hb
-    echo "bad luck from Japan"
-    elif [ $hb -eq 17 ]
-    then
+    echo "bad luck from china";;
+    9)
     echo $hb
-    echo "bad luck from Italy"
-    else
+    echo "bad luck from japan";;
+    17)
     echo $hb
-    fi
+    echo "bad luck from italy";;
+   esac
     hb=$((hb+1))
 done
