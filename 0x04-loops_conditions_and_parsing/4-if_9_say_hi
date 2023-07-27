@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
-
-# This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
-
+#This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
 hb=0
 while [ $hb -lt 10 ]
 do
-         echo "Best School"
-         hb=$((hb+1))
-         if [ $hb -eq 9 ]
-         then
-                echo "Hi"
-         fi
+    echo "Best School"
+    hb=$((hb+1))
+    if [ $hb -eq 9 ]
+    then
+    echo "Hi"
+    fi
 done
