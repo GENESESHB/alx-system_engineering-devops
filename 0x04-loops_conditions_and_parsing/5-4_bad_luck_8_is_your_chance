@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
 hb=0
-while [ $hb -le 10 ]
+while [ $hb -lt 10 ]
 do
-    if [ $hb -eq 4 ]
+    if [ $hb -eq 3 ]
     then
     echo "bad luck"
-    elif [ $hb -eq 8 ]
+    elif [ $hb -eq 7 ]
     then
     echo "good luck"
     else
