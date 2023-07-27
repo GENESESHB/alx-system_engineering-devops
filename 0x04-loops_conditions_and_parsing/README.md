@@ -107,3 +107,41 @@ do
     ((count++))
 done
 ```
+
+
+# a Bash script that uses a while loop and an if statement to display "Best School" 10 times but says "Hi" on a new line during the 9th iteration:
+
+````bash
+
+#!/usr/bin/env bash
+
+# This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
+
+# Initialize a counter
+count=0
+
+# Use the while loop to display "Best School" with "Hi" on the 9th iteration
+while [ $count -lt 10 ]
+do
+    if [ $count -eq 8 ]; then
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+
+    # Increment the counter
+    ((count++))
+done
+Save the script in a file, for example, "4-if_9_say_hi", and make sure to give it execute permissions using the following command:
+
+bash
+Copy code
+chmod +x 4-if_9_say_hi
+Then, you can run the script with the command:
+
+bash
+Copy code
+./4-if_9_say_hi
+It will display "Best School" 10 times, but on the 9th iteration, it will print "Hi" on a new line. The if statement checks if the counter is equal to 8 (corresponding to the 9th iteration) and prints "Hi" instead of "Best School".
+
+````
