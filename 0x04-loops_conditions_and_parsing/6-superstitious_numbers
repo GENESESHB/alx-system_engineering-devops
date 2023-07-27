@@ -7,13 +7,13 @@ do
     case $hb in
     4)
     echo $hb
-    echo "bad luck from china";;
+    echo "bad luck from China";;
     9)
     echo $hb
-    echo "bad luck from japan";;
+    echo "bad luck from Japan";;
     17)
     echo $hb
-    echo "bad luck from italy";;
+    echo "bad luck from Italy";;
    esac
     hb=$((hb+1))
 done
