@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#This script displays numbers from 1 to 20 with special messages for specific numbers
+hb=1
+while [ $hb -le 20 ]
+do
+    if [ $hb -eq 4 ]
+    then
+    echo $hb
+    echo "bad luck from China"
+    elif [ $hb -eq 9 ]
+    then
+    echo $hb
+    echo "bad luck from Japan"
+    elif [ $hb -eq 17 ]
+    then
+    echo $hb
+    echo "bad luck from Italy"
+    else
+    echo $hb
+    fi
+    hb=$((hb+1))
+done

@@ -132,10 +132,10 @@ do
     # Increment the counter
     ((count++))
 done
+```
 Save the script in a file, for example, "4-if_9_say_hi", and make sure to give it execute permissions using the following command:
 
-bash
-Copy code
+````bash
 chmod +x 4-if_9_say_hi
 Then, you can run the script with the command:
 
@@ -144,4 +144,30 @@ Copy code
 ./4-if_9_say_hi
 It will display "Best School" 10 times, but on the 9th iteration, it will print "Hi" on a new line. The if statement checks if the counter is equal to 8 (corresponding to the 9th iteration) and prints "Hi" instead of "Best School".
 
-````
+```
+
+
+# collaboration the while&if&elif&else
+
+``
+in this file we use the logiqal operations for get the output like alx want and this is a code 
+``
+
+````bash
+#!/usr/bin/env bash
+#This script is displaying "Best School" 10 times with "Hi" on the 9th iteration
+hb=0
+while [ $hb -lt 10 ]
+do
+    if [ $hb -eq 3 ]
+    then
+    echo "bad luck"
+    elif [ $hb -eq 7 ]
+    then
+    echo "good luck"
+    else
+    echo "Best School"
+    fi
+    hb=$((hb+1))
+done
+```
