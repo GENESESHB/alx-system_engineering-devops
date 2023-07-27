@@ -63,4 +63,22 @@ Then, you can run the script with the command:
 ./2-while_best_school
 ```
 
+# a Bash script that uses the until loop to display "Best School" 10 times:
 
+````bash
+
+#!/usr/bin/env bash
+
+# This script is displaying "Best School" 10 times
+
+# Initialize a counter
+count=0
+
+# Use the until loop to display "Best School" until the counter reaches 10
+until [ $count -eq 10 ]
+do
+    echo "Best School"
+    # Increment the counter
+    ((count++))
+done
+```
