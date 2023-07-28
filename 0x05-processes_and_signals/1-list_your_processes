@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Display the header fot output
+echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
+ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest | head -50
