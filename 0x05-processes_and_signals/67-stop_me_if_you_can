@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#kill the proesses in ather tirminal
+pkill -f 7-highlander
