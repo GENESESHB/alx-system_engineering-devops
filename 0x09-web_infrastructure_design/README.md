@@ -18,6 +18,13 @@ Concepts
 -   [Load balancer](https://alx-intranet.hbtn.io/concepts/46)
 -   [Server](https://alx-intranet.hbtn.io/concepts/67)
 
+
+# tasks 🔃
+
+               ``tasks_0``
+![tasks_0](https://github.com/B3zaleel/0x09-web_infrastructure_design/blob/main/0-simple_web_stack.jpg)
+                ``tasks_1``
+![tasks_1](
 Resources
 ---------
 
