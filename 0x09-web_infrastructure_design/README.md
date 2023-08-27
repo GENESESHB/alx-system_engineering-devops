@@ -30,8 +30,12 @@ Concepts
                  ``tasks_2``
 ![tasks_2](https://raw.githubusercontent.com/B3zaleel/0x09-web_infrastructure_design/main/2-secured_and_monitored_web_infrastructure.jpg)
 
+                   `` tasks_3 ``
 
-Resources
+![tasks_2](https://raw.githubusercontent.com/B3zaleel/0x09-web_infrastructure_design/main/3-scale_up.jpg)
+
+
+⛽ Resources
 ---------
 
 **Read or watch**:
