@@ -23,8 +23,13 @@ Concepts
 
                ``tasks_0``
 ![tasks_0](https://github.com/B3zaleel/0x09-web_infrastructure_design/blob/main/0-simple_web_stack.jpg)
-                ``tasks_1``
+                
+                 ``tasks_1``
 ![tasks_1](https://github.com/B3zaleel/0x09-web_infrastructure_design/blob/main/1-distributed_web_infrastructure.jpg)
+                
+                 ``tasks_2``
+![tasks_2](https://raw.githubusercontent.com/B3zaleel/0x09-web_infrastructure_design/main/2-secured_and_monitored_web_infrastructure.jpg)
+
 
 Resources
 ---------
