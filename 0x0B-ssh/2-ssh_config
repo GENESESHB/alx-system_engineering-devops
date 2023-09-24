@@ -1,0 +1,6 @@
+# Configuration for host 34.227.101.167
+Host 34.227.101.167
+	#use the privat key ~/.ssh/school for authentification
+	IdentifyFile ~/.ssh/school
+	#disable password authentification
+	PasswordAuthentification no
