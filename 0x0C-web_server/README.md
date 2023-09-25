@@ -49,3 +49,74 @@ else
 - `" $3@$2":~` specifies the destination path on the remote server. It uses the provided username (`$3`) and IP address (`$2`) to specify the destination directory as the home directory (`~`) of the remote user.
 
 This script essentially checks if it has been provided with the correct number of command-line arguments. If not, it provides usage instructions. If the correct number of arguments is given, it uses SCP to transfer a file to the specified remote server using the provided username and SSH key.
+
+# 	1
+
+This Bash script is designed to configure a new Ubuntu machine by installing the Nginx web server, ensuring it listens on port 80, and serving a web page that returns the "Hello World!" string. Let's break down the script step by step:
+
+1. **Shebang and Comments:**
+   ```bash
+   #!/usr/bin/env bash
+   # Configures a new ubuntu machine by installing
+   # Nginx where it should be listening on port 80
+   # Serve a page that would return a Hello World string
+   ```
+   - The script starts with a shebang line (`#!/usr/bin/env bash`) that specifies the interpreter to be used (Bash).
+   - Comments are used to provide a brief description of the script's purpose.
+
+2. **Updating and Installing Nginx:**
+   ```bash
+   echo -e "Updating and installing Nginx.\n"
+   sudo apt-get update -y -qq && \
+       sudo apt-get install nginx -y
+   ```
+   - This section updates the package list (`apt-get update`) and installs Nginx (`apt-get install nginx`) with the `-y` flag to automatically confirm installation prompts.
+   - `-qq` is used for quiet output.
+   - `&&` is used to execute the second command if the first one succeeds.
+
+3. **Setting up Some Minor Stuff:**
+   ```bash
+   echo -e "\nSetting up some minor stuff.\n"
+   ```
+   - This section includes miscellaneous setup tasks.
+
+4. **Starting Nginx Service:**
+   ```bash
+   sudo service nginx start
+   ```
+   - This command starts the Nginx service.
+
+5. **Allowing Nginx on Firewall:**
+   ```bash
+   sudo ufw allow 'Nginx HTTP'
+   ```
+   - This allows HTTP traffic (port 80) through the Ubuntu firewall (`ufw`) for Nginx.
+
+6. **Setting Ownership and Permissions:**
+   ```bash
+   sudo chown -R "$USER":"$USER" /var/www/html
+   sudo chmod -R 755 /var/www
+   ```
+   - These commands set the ownership and permissions for the `/var/www/html` directory to allow the current user (`$USER`) to edit the website files.
+
+7. **Backup Default Index and Create New Index:**
+   ```bash
+   cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
+   echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+   ```
+   - The script creates a backup of the default Nginx index file.
+   - It then uses `dd` to create a new index file with the content "Hello World!".
+
+8. **Restarting Nginx:**
+   ```bash
+   sudo service nginx restart
+   ```
+   - This command restarts the Nginx service to apply the configuration changes.
+
+9. **Completion Message:**
+   ```bash
+   echo -e "\nCompleted. ✅\n"
+   ```
+   - This line prints a completion message with a checkmark emoji.
+
+When you run this script on a new Ubuntu machine, it automates the installation and configuration of Nginx to serve a "Hello World!" page on port 80.
