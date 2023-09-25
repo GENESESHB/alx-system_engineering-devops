@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Update the package list to make sure we have the latest package information.
+apt-get update -y
+
+# Install Nginx web server.
+apt-get install nginx -y
+
+# Create a custom HTML file with "Hello World!" message.
+echo "Hello World!" > /var/www/html/index.html
+
+# Check if Nginx is already running and, if so, stop it.
+if ps aux | grep -q '[n]ginx'; then
+    service nginx stop
+fi
+
+# Start Nginx.
+service nginx start
+
