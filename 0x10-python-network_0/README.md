@@ -1,4 +1,8 @@
+![img](https://th.bing.com/th/id/R.bd1a0730c0061f248419a8ccf0b0be46?rik=8dpH%2bpZZccVI4Q&pid=ImgRaw&r=0)
 # 0x10. Python - Network #0
+
+# RESOURCES
+![all](https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)
 
 ## Learning Objectives
 * What a URL is
