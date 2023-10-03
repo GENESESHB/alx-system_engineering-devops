@@ -1,28 +1,44 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Installs HAProxy version 1.8 with the following configurations:
+#+    Enables management via the init script.
+#+    Distributes requests using a round-robin algorithm.
 
-# Install HAproxy
-sudo apt-get update
-sudo apt-get install -y haproxy
+apt-get install -y software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-1.8
+apt-get update
+apt-get install -y haproxy=1.8.\*
 
-# Configure HAproxy
-sudo tee /etc/haproxy/haproxy.cfg > /dev/null <<EOL
-frontend web
-    bind *:80
+echo "ENABLED=1" >> /etc/default/haproxy
+mv /etc/haproxy/haproxy.cfg{,.original}
+touch /etc/haproxy/haproxy.cfg
+
+printf %s "global
+    log 127.0.0.1 local0 notice
+    maxconn 2000
+    user haproxy
+    group haproxy
+
+defaults
+    log     global
+    mode    http
+    option  httplog
+    option  dontlognull
+    retries 3
+    option redispatch
+    timeout connect  5000
+    timeout client  10000
+    timeout server  10000
+
+listen hbnb
+    bind 0.0.0.0:80
     mode http
-    default_backend web_servers
-
-backend web_servers
-    mode http
+    stats enable
+    stats uri /haproxy?stats
     balance roundrobin
-    server web-01 [STUDENT_ID]-web-01:80 check
-    server web-02 [STUDENT_ID]-web-02:80 check
-EOL
+    option httpclose
+    option forwardfor
+    server 369701-web-01 100.26.215.3:80 check
+    server 369701-web-02 3.90.70.142:80 check
+" >> /etc/haproxy/haproxy.cfg
 
-# Enable HAproxy init script
-sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
-
-# Restart HAproxy service
-sudo service haproxy restart
-
-# Make sure HAproxy service starts on boot
-sudo systemctl enable haproxy
+service haproxy start
