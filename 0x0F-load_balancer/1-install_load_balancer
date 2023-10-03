@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Install HAproxy
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+# Configure HAproxy
+sudo tee /etc/haproxy/haproxy.cfg > /dev/null <<EOL
+frontend web
+    bind *:80
+    mode http
+    default_backend web_servers
+
+backend web_servers
+    mode http
+    balance roundrobin
+    server web-01 [STUDENT_ID]-web-01:80 check
+    server web-02 [STUDENT_ID]-web-02:80 check
+EOL
+
+# Enable HAproxy init script
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+
+# Restart HAproxy service
+sudo service haproxy restart
+
+# Make sure HAproxy service starts on boot
+sudo systemctl enable haproxy
