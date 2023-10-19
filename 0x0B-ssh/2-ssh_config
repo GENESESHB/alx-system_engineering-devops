@@ -1,6 +1,0 @@
-# Configuration for host 18.206.207.65
-Host 100.26.215.3
-	#use the privat key ~/.ssh/school for authentification
-	IdentifyFile ~/.ssh/school
-	#disable password authentification
-	PasswordAuthentification no
