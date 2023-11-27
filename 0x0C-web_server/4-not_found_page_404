@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Bash script that configures an Nginx server to have custom 404 page with a custom text
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Hello World!" > sudo tee /var/www/html/yasin.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/notfound.html
+echo "server {
+	listen 80;
+
+	listen [::]:80 default_server;
+
+	root /var/www/html;
+
+	index yasin.index index.html index.nginx-debian.html;
+
+	location /redirect_me {
+
+		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+	}
+	error_page 404 /notfound.html;
+	location = /notfound {
+	root /var/www/html;
+	internal;
+	}	
+}" | sudo tee /etc/nginx/sites-available/default
+
+sudo service nginx restart
