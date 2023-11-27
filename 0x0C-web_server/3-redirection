@@ -1,4 +1,4 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 # Bash script that configures an Nginx server so that /redirect_me is redirecting to another page.
 sudo apt-get -y update
 sudo apt-get -y install nginx
