@@ -6,7 +6,7 @@ For this project, we expect you to look at these concepts:
 - [Load balancer](https://intranet.alxswe.com/concepts/46)
 - [Web stack debugging](https://intranet.alxswe.com/concepts/68)
 
-<img src="i.png" alt="">
+![lead-balncer](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/275/qfdked8.png)
 
 ## Background Context
 ### You have been given 2 additional servers:
