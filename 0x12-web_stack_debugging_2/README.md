@@ -1,4 +1,4 @@
-![Description](https://www.canva.com/design/DAF3ckquQvU/lNaG7ndwEsndvsBrdRXohQ/view?utm_content=DAF3ckquQvU&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+![Description](images/hbpresentation.jpg)
 
 
 0x12. Web stack debugging #2
