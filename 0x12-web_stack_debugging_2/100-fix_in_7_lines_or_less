@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# Fixes a web server to run nginx as the www-data user listening to port 8080
+# Fixes a web server to run Nginx as the www-data user listening on port 8080.
 sed -i "s/#user www-data/user www-data/" /etc/nginx/nginx.conf
 sed -i "s/80/8080/g" /etc/nginx/sites-available/default
 chmod 644 /etc/nginx/nginx.conf
 pkill apache2
 sudo -u www-data service nginx start
-
