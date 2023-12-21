@@ -1,5 +1,7 @@
-ylvain Kalache, co-founder at Holberton School
--   Weight: 1
+![hassanhb](images/hbpresentation.jpg)
+
+#sylvain Kalache, co-founder at Holberton School
+#  Weight: 1
 
 Concepts
 --------
