@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-python script that can use REST API 
+python script that can use REST API
 for give ass the id return information about progress
 """
 
