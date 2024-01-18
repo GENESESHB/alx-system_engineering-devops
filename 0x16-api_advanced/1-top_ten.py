@@ -1,30 +1,25 @@
 #!/usr/bin/python3
-
+""" top_ten model """
 import requests
 
+
 def top_ten(subreddit):
+    """ a function that queries the Reddit API and prints
+    the titles of the first 10 hot posts listed for
+    a given subreddit."""
+    if not subreddit:
+        return None
+
     url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
-
+    headers = {"User-Agent": "0x16. API advanced/Task0"}
     response = requests.get(url, headers=headers)
-
-    # Check if the request was successful (status code 200)
     if response.status_code == 200:
         data = response.json()
-        if 'data' in data and 'children' in data['data']:
-            for post in data['data']['children']:
-                print(post['data']['title'])
+        posts = data.get('data', {}).get('children', [])
+        if posts:
+            for post in posts:
+                print(post.get('data').get('title'))
         else:
-            print("No posts found.")
+            print(None)
     else:
-        print("None")
-
-if __name__ == '__main__':
-    import sys
-
-    if len(sys.argv) < 2:
-        print("Please pass an argument for the subreddit to search.")
-    else:
-        subreddit = sys.argv[1]
-        top_ten(subreddit)
-
+        print(None)
